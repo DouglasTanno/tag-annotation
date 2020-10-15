@@ -15,7 +15,7 @@ If somehow the file is not found, the message "Error reading X file", being X th
 The train.txt and test.txt files must be in the directory specified in the commands. The tags.txt must be in the same directory as the train.txt.
 
 Commands:
-> python train.py D:\user\folder\
-> python test.py D:\user\folder\
+> train.py D:\user\folder\
+> test.py D:\user\folder\
 
 These two commands will generate the respectively .arff files in the directory the python script is being executed.
