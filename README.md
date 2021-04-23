@@ -1,7 +1,7 @@
-This file countains instructions for how to run the combination of textural and acoustic features program for tag classification in Python.
+This guide countains instructions for how to run the combination of textural and acoustic features program for tag classification in Python.
 The source code can be obtained through the GitHub repository: https://github.com/DouglasTanno/tag-annotation.git
 
-This guide describes the following steps:
+The following steps are described:
 - Feature Extraction (Acoustic and Textural Features);
 - Stacking Generalization (First and Second Stage);
 - Prediction Evaluation (Precision, Recall, Accuracy and F-Score);
