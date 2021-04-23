@@ -17,9 +17,11 @@ It is important that all the files paths in the lists are correct for the featur
 
 
 1. Feature Extraction:
+
 Acoustic and textural features are extracted for further classification and combination.
 
-1.1 Acoustic Features Extraction: 
+1.1 Acoustic Features Extraction:
+
 This step is executed using Marsyas 0.5.0, an open source software used for audio processing. More information available in marsyas.info.
 The train.txt and test.txt files are used as input. As output, the train.arff and test.arff files are generated, countaining the acoustic features data. 
 The features consist of means and variances of time-domain Zero-Crossings, Spectral Centroid, Rolloff, Flux and Mel-Frequency Cepstral Coefficients (MFCC) over a texture window of 1 sec.
@@ -56,6 +58,7 @@ Stacking generalization consists of a two-stage execution, using a SVM Classifie
 This step consists of using the "kea" function and the "threshold_binarization.rb" Ruby script from Marsyas, also specified by ACM Multimedia 2009's paper.
 
 2.1 First Stage:
+
 The .arff files generated in the previous steps are used as input.
 In the first command specified below stage1_affinities.txt file will be generated. This file contains the predicted tag affinities of each song for all the tags in the test.txt.
 The second command consists in generating the file stage1_predictions.txt, a predicted tag binary relevance file, through the execution of the threshold_binarization.rb script.
@@ -67,6 +70,7 @@ Commands:
 In addition, the stacked_train.arff and stacked_test.arff files are generated as well, to be used in the step 2.2.
 
 2.2 Second Stage:
+
 The stacked_train.arff and stacked_test.arff files generated in the previous steps are used as input.
 The commands are similar to the those specified in the step 2.1. The stage2_affinities.txt and stage2_predictions.txt files are generated.
 
