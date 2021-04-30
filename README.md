@@ -30,6 +30,7 @@ The total output of features is 124.
 
 Commands: 
 > bextract -ws 1024 -as 400 -sv -fe train.txt -w train.arff -od /path/to/workdir/
+
 > bextract -ws 1024 -as 400 -sv -fe test.txt -w test.arff -od /path/to/workdir/
 
 These two commands will generate the respectively .arff file in the directory specified.
