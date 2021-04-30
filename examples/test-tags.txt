@@ -1,0 +1,2 @@
+...\...\songfile_test.wav	tag1
+...\...\songfile_test.wav	tag3

@@ -1,0 +1,4 @@
+...\...\songfile_train.wav	tag1
+...\...\songfile_train.wav	tag2
+...\...\songfile_train.wav	tag3
+...\...\songfile_train.wav	tag4
