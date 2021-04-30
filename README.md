@@ -31,6 +31,7 @@ Each songfile needs to be in the .wav format for the execution.
 
 Commands: 
 > bextract -ws 1024 -as 400 -sv -fe train.txt -w train.arff -od /path/to/workdir/
+
 > bextract -ws 1024 -as 400 -sv -fe test.txt -w test.arff -od /path/to/workdir/
 
 These two commands will generate the respectively .arff file in the directory specified.
@@ -48,6 +49,7 @@ If somehow the file is not found, the message "Error reading X file", being X th
 
 Commands:
 > train.py /path/to/workdir/
+
 > test.py /path/to/workdir/
 
 These two commands will generate the respectively .arff file in the directory specified.
@@ -67,6 +69,7 @@ The second command consists in generating the file stage1_predictions.txt, a pre
 
 Commands:
 > kea -m tags -id /path/to_working_dir -od /path/to/workdir -w train.arff -tc test.arff -pr stage1_affinities.txt 
+
 > ../../scripts/Ruby/threshold_binarization.rb train.txt stage1_affinities.txt > stage1_predictions.txt
 
 In addition, the stacked_train.arff and stacked_test.arff files are generated as well, to be used in the step 2.2.
@@ -78,6 +81,7 @@ The commands are similar to the those specified in the step 2.1. The stage2_affi
 
 Commands:
 > kea -m tags -id /path/to_workdir -od /path/to/workdir -w stacked_train.arff -tc stacked_test.arff -pr stage2_affinities.txt 
+
 > ../../scripts/Ruby/threshold_binarization.rb train.txt stage2_affinities.txt > stage2_predictions.txt 
 
 
@@ -89,6 +93,7 @@ The results are evaluated through the metrics of Precision, Recall, Accuracy and
 
 Commands:
 > ruby per-tag-and-global-precision-recall-fixed.rb test-tags.txt stage1_predictions.txt.txt
+
 > ruby per-tag-and-global-precision-recall-fixed.rb test-tags.txt stage2_predictions.txt.txt
 
 
@@ -104,6 +109,7 @@ The train.arff and test.arff (248 features each), with the combination of the fe
 
 Commands:
 > ef_train.py train_acoustic.arff train_lbp.arff train.txt
+
 > ef_test.py test_acoustic.arff test_lbp.arff test.txt
 
 After the combination, the resulting output files are used as input for the steps 2 and 3.
@@ -115,6 +121,7 @@ Four combinations are made, based on the operations of Maximum, Minimum, Sum and
 
 Commands:
 > late_fusion.py ac_stage1_affinities.txt lbp_stage1_affinities.txt
+
 > late_fusion.py ac_stage2_affinities.txt lbp_stage2_affinities.txt
 
 Each resulting file is used in the second command of the steps 2.1 and 2.2, replacing the stage1_affinities.txt and stage2_affinities.txt normally used. 
