@@ -120,8 +120,8 @@ This step consists in combining both stage_affinities.txt of acoustic and textur
 Four combinations are made, based on the operations of Maximum, Minimum, Sum and Product, using the late_fusion.py. These operations are applied to each line of the stage_affinities.txt, resulting in four .txt output files, referring to each operation.
 
 Commands:
-> late_fusion.py ac_stage1_affinities.txt lbp_stage1_affinities.txt
+> late_fusion.py .../output-directory/ ac_stage1_affinities.txt lbp_stage1_affinities.txt
 
-> late_fusion.py ac_stage2_affinities.txt lbp_stage2_affinities.txt
+> late_fusion.py .../output-directory/ ac_stage2_affinities.txt lbp_stage2_affinities.txt
 
 Each resulting file is used in the second command of the steps 2.1 and 2.2, replacing the stage1_affinities.txt and stage2_affinities.txt normally used. 
